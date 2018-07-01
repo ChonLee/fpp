@@ -169,6 +169,8 @@ int RGBMatrixOutput::Init(Json::Value config)
 	options.rows = m_panelHeight;
 	options.cols = m_panelWidth;
 	options.pwm_bits = 8;
+    options.row_address_type = 2;
+    options.multiplexing = 3;
 
 	if (config.isMember("brightness"))
 		options.brightness = config["brightness"].asInt();
